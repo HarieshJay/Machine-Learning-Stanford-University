@@ -1,6 +1,6 @@
 ## Cost Function
 
-Cost functions are used to measure the accuracy of the hypothesis function. Minimizing the cost function guarantees the best fit to the data with the given model.
+Cost functions are used to measure the accuracy of the hypothesis. Minimizing the cost function guarantees the best fit to the data with the given model.
 $$
 J(\theta_0, \theta_1) = \frac{1}{2m}\sum^m_{i=1}(\hat{y}-y_i)^2 = \frac{1}{2m}\sum^m_{i=1}(h_\theta(x_i)-y_i)^2
 $$
@@ -17,7 +17,7 @@ $$
 $$
 where $j=0,1$. This is done until convergence. Take the partial derivative of the cost function with respect to the coefficient being adjusted for and choose the direction with the steepest descent. The size of the steps are determined by $\alpha$, which is the learning rate.
 
-Both coefficients should be updated simultaneously, otherwise the update value of one will be used to calculate the value of the other, leading to a wrong implementation. Regardless if the partial derivative is positive or negative, $\theta_j$ moves closer to the minima, and will eventually converge. If the partial derivative is negative, $\theta_j$ increases, and decreases if the partial derivative is positive. It will converge when the at the minimum since the partial derivative will be 0.
+Both coefficients should be updated simultaneously, otherwise the updated value of one will be used to calculate the value of the other, leading to a wrong implementation. Regardless if the partial derivative is positive or negative, $\theta_j$ moves closer to the minima, and will eventually converge. If the partial derivative is negative, $\theta_j$ increases, and decreases if the partial derivative is positive. It will converge at the minimum since the partial derivative will be 0.
 
 If $\alpha$ is too small, gradient descent will be too slow and computationally intensive. However, if $\alpha$ is too large, the minimum can be overshot, fail to converge and may diverge.
 

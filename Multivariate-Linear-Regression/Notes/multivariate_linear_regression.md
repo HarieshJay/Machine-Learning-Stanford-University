@@ -27,13 +27,13 @@ Identical to Gradient Descent for univariate linear regression, but needs to be 
 
 If there is a large range of values that a feature can take, the contour graph will be extremely elliptical, causing gradient descent to take more iterations and a complicated trajectory to find the global minimum. By scaling the features, there will be a much more direct path to the global minimum and gradient descent will converge in fewer iterations.
 
-Scale the features such that $-1 \le x_i \le 1$ for every feature $i$. $[-1,1]$ are rough estimates, values slightly greater or less are acceptable. For example, $x_1 = \frac{size (feet^2) }{2000}$, where the range of the sizes (max - min), is 2000.
+Scale the features such that $-1 \le x_i \le 1$ for every feature $i$. $[-1,1]$ are rough estimates, values slightly greater or less are acceptable. For example, $x_1 = \frac{size (feet^2) }{2000}$, where the range of the sizes (max - min) is 2000.
 
 The new range after feature scaling is 1.
 
 **Mean normalization**
 
-Subtract the mean value for the input from each value, creating a new mean of 0. 
+Subtract the mean for the input from each value, creating a new mean of 0. 
 
 Applying both mean normalization and feature scaling will look like
 $$
@@ -43,11 +43,11 @@ Where $s_i$ is the range of values or the standard deviation, which will have di
 
 **Debugging**
 
-Plotting the cost function and the number of iterations will display how well gradient descent is working, and how many iterations are needed for gradient descent to converge. If the the cost function increases as the number of iterations increase, this means gradient descent is not working, and usually means the learning rate is too high. If the learning rate is too high, the global minimum can be overshot. If the cost function increases then decreases repeatedly, the learning rate is also too high.
+Plotting the cost function and the number of iterations will display how well gradient descent is working, and how many iterations are needed for gradient descent to converge. If the cost function increases as the number of iterations increase, this means gradient descent is not working, and usually means the learning rate is too high. If the learning rate is too high, the global minimum can be overshot. If the cost function increases then decreases repeatedly, the learning rate is also too high.
 
 If the cost function decreases by a extremely small value, for example less than $10^{-3}$ in one iteration, declare convergence, this is called an automatic convergence test.
 
-Try a range of $\alpha$ similar to $..,0.001, 0.003, 0.01, 0.03, 0.1, 0.3, 1,...$.
+Try a sequence of $\alpha$ similar to $..,0.001, 0.003, 0.01, 0.03, 0.1, 0.3, 1,...$.
 
 ## Normal Equation Method
 
